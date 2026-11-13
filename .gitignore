@@ -1,0 +1,19 @@
+# Build output and generated files
+**/bin/
+**/obj/
+/app/
+**/test-results/
+**/data/
+**/error.log
+
+# Local tooling
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Generated binaries / release archives
+*.exe
+*.pdb
+*.zip

@@ -1,0 +1,9 @@
+PASS Clock formats long tracks and clamps invalid input
+PASS Search encodes reserved URI characters and Polish text
+PASS Only Spotify sessions are selected
+PASS Missing settings fall back to defaults
+PASS Settings and favorites survive atomic save and reload
+PASS Corrupt JSON falls back safely
+PASS Null and duplicate favorites and out-of-range tint are repaired
+PASS Nonfinite placement and tint are repaired
+RESULT: 8 passed, 0 failed

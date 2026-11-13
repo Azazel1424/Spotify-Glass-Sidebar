@@ -1,87 +1,105 @@
 # Spotify Glass Sidebar
 
-**Spotify Glass Sidebar** to lekki, przenośny widget muzyczny dla **Windows 11 x64**. Łączy szklany wygląd inspirowany stylem Acrylic z obsługą muzyki odtwarzanej w desktopowej aplikacji Spotify.
+**Minimalistyczny widget Spotify dla Windows 11 — w dwóch trybach, z efektem szkła.**
 
-> **Projekt nieoficjalny.** Spotify Glass Sidebar jest niezależną aplikacją i nie jest tworzony, sponsorowany ani wspierany przez Spotify.
+Spotify Glass Sidebar to niezależna aplikacja desktopowa, która pokazuje aktualny utwór i umożliwia sterowanie odtwarzaniem w aplikacji Spotify. Nie wymaga Rainmetera, logowania w widżecie ani konfiguracji Spotify Web API.
+
+> **Projekt nieoficjalny.** Nie jest produktem Spotify i nie jest przez Spotify sponsorowany, zatwierdzony ani wspierany. Nazwa i znaki Spotify należą do ich właścicieli.
 
 ## Podgląd
 
-| Rozwinięty panel | Zwinięty pasek |
-| :---: | :---: |
-| ![Rozwinięty panel Spotify Glass Sidebar](screenshots/podglad-panel.jpg) | ![Zwinięty pasek Spotify Glass Sidebar](screenshots/podglad-pasek.jpg) |
+<table>
+  <tr>
+    <th>Panel rozwinięty</th>
+    <th>Pasek zwinięty</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/podglad-panel.jpg" alt="Spotify Glass Sidebar — panel rozwinięty" width="284"></td>
+    <td align="center"><img src="screenshots/podglad-pasek.jpg" alt="Spotify Glass Sidebar — panel zwinięty" width="72"></td>
+  </tr>
+</table>
 
-## Najważniejsze funkcje
+## Funkcje
 
-- **Dwa widoki:** pełny panel i minimalistyczny pasek boczny.
-- **Informacje o utworze:** tytuł, wykonawca, okładka, czas i stan odtwarzania.
-- **Sterowanie:** odtwarzanie/pauza, poprzedni i następny utwór oraz przewijanie suwakiem — w zakresie obsługiwanym przez Spotify.
-- **Wyszukiwanie i biblioteka:** otwieranie odpowiednich widoków w Spotify.
-- **Ulubione widgetu:** lokalne zakładki do utworów, niezależne od polubionych utworów na koncie Spotify.
-- **Personalizacja:** przyciemnienie szkła, opcja „zawsze na wierzchu” i animacja odtwarzania.
-- **Wygodna obsługa:** przeciąganie okna, zwijanie, ikona w zasobniku systemowym i zapamiętywanie ustawień.
-- **Bez logowania:** aplikacja nie wymaga podawania hasła do Spotify ani tokenu Spotify Web API.
+- **Dwa widoki:** pełny panel z okładką i kontrolkami oraz wąski, minimalistyczny pasek.
+- **Informacje o muzyce:** tytuł, wykonawca, okładka, czas utworu i aktualny stan odtwarzania.
+- **Sterowanie:** play/pauza, poprzedni/następny utwór i przewijanie za pomocą suwaka — w zakresie udostępnianym przez Spotify.
+- **Wyszukiwanie i biblioteka:** przekierowanie do odpowiednich widoków Spotify.
+- **Lokalne ulubione:** własna lista zakładek do utworów, niezależna od polubień na koncie Spotify.
+- **Ustawienia wyglądu:** poziom przyciemnienia, animacja odtwarzania i opcja „zawsze na wierzchu”.
+- **Wygoda:** przeciąganie, zwijanie, zasobnik systemowy i automatyczny zapis preferencji.
 
-## Wymagania
+## Pobieranie i instalacja
 
-- Windows 11 **x64**.
-- Zainstalowana **desktopowa aplikacja Spotify** z aktywną lokalną sesją odtwarzania.
-- Nie trzeba instalować **Rainmetera** ani osobno środowiska .NET — wydanie jest publikowane jako aplikacja samodzielna (`win-x64`).
+**System:** Windows 11 x64. **Wymagane:** zainstalowane desktopowe Spotify.
 
-**Ważne:** samo odtwarzanie Spotify w przeglądarce nie jest obsługiwane jako źródło sesji. Efekt Acrylic najlepiej działa z włączonymi efektami przezroczystości systemu Windows 11; natywne tło systemowe dostępne jest od Windows 11 22H2.
-
-## Instalacja
-
-1. Pobierz paczkę ZIP z sekcji **Releases** tego repozytorium.
-2. Wypakuj **całą paczkę** do zapisywalnego folderu, np. `Dokumenty\SpotifyGlassSidebar`.
+1. Otwórz zakładkę **Releases** tego repozytorium i pobierz `SpotifyGlassSidebar-Windows11-x64-v1.0.0.zip`.
+2. Wypakuj **cały archiwum ZIP** do zapisywalnego folderu, np. `Dokumenty\SpotifyGlassSidebar`.
 3. Uruchom `app\SpotifyGlassSidebar.exe`.
-4. Włącz Spotify na komputerze i rozpocznij odtwarzanie utworu. Widget powinien rozpoznać sesję automatycznie.
+4. Uruchom Spotify na tym komputerze i włącz dowolny utwór; widżet powinien rozpoznać lokalną sesję.
 
-Plik EXE nie jest obecnie podpisany certyfikatem wydawcy, dlatego Windows może wyświetlić ostrzeżenie o nieznanym wydawcy. Pobieraj aplikację wyłącznie z zaufanego wydania.
+Program jest publikowany jako samodzielny plik wykonywalny z dołączonym środowiskiem .NET, więc użytkownik nie musi instalować .NET SDK. **Nie jest to instalator** — aplikacja nie tworzy autostartu ani nie modyfikuje konfiguracji systemu.
+
+> Plik EXE nie jest podpisany certyfikatem wydawcy; Windows może ostrzec o nieznanym wydawcy. Pobieraj wyłącznie z zaufanego wydania tego projektu.
 
 ## Obsługa
 
-| Czynność | Jak wykonać |
+| Czynność | Sposób |
 | --- | --- |
-| Zwiń panel | Strzałka w prawym górnym rogu lub `Ctrl+B` w aktywnym oknie |
-| Rozwiń pasek | Kliknij zielone logo na zwiniętym pasku |
-| Przenieś okno | Przeciągnij pusty fragment nagłówka; na pasku obszar nad lub pod logo |
-| Steruj muzyką | Przyciski pod okładką i suwak odtwarzania |
-| Wyszukaj utwór | **Szukaj**, wpisz frazę, naciśnij `Enter` |
-| Zamknij wyszukiwanie/ustawienia | `Esc` |
-| Ukryj/przywróć okno | Ikona aplikacji w zasobniku systemowym |
-| Zamknij aplikację | Ustawienia, menu zasobnika lub `Alt+F4` |
+| Zwiń / rozwiń | Strzałka na panelu / zielone logo na pasku; `Ctrl+B` w aktywnym oknie |
+| Przenieś widget | Przeciągnij puste miejsce nagłówka (na pasku: przestrzeń nad/pod logo) |
+| Play, pauza, zmiana utworu | Przyciski odtwarzacza |
+| Przewiń utwór | Kliknij lub przeciągnij suwak |
+| Wyszukaj | **Szukaj** → wpisz frazę → `Enter` |
+| Zamknij panel wyszukiwania/ustawień | `Esc` |
+| Ukryj / przywróć widget | Ikona w zasobniku systemowym |
+| Zamknij aplikację | **Ustawienia**, menu ikony w zasobniku lub `Alt+F4` |
 
-Ustawienia, pozycja okna, tryb paska i lokalne ulubione zapisywane są w `app\data\settings.json`. Przenosząc konfigurację na inny komputer, skopiuj również folder `data`. Autostart można skonfigurować ręcznie przez skrót do EXE w folderze Autostart systemu Windows.
+Pozycja, tryb paska, preferencje i ulubione są zapisywane w `app\data\settings.json`. Można przenieść je na inny komputer razem z folderem `data`. Autostart można skonfigurować ręcznie, dodając skrót do programu do folderu autostartu Windows.
 
 ## Ograniczenia
 
-- Widget steruje **lokalną sesją Spotify** poprzez mechanizmy multimedialne Windows. Dostępność poszczególnych poleceń zależy od Spotify.
-- Spotify Connect na innym urządzeniu, reklamy, podcasty i treści na żywo mogą działać inaczej.
-- „Ulubione widgetu” **nie synchronizują się** z polubionymi utworami konta Spotify.
-- Animowane słupki sygnalizują odtwarzanie — **nie analizują dźwięku**.
-- Jest to osobne okno, a nie element panelu widżetów Windows. Polecenie „Pokaż pulpit” może je ukryć; można je przywrócić z zasobnika.
-- Według dokumentacji aplikacja **nie wysyła własnych żądań sieciowych**. Linki nawigacyjne otwierają Spotify lub odpowiednią stronę w przeglądarce.
+Widget korzysta z **lokalnej sesji multimedialnej Windows**, a nie ze Spotify Web API. Samo Spotify otwarte w przeglądarce nie jest obsługiwanym źródłem odtwarzania. Przy odtwarzaniu przez Spotify Connect na innym urządzeniu, reklamach, podcastach i treściach na żywo niektóre funkcje mogą działać inaczej.
 
-## Testy wersji 1.0
+„Ulubione widgetu” to **lokalne zakładki**, nie lista „Polubione utwory” w Spotify. Animowane słupki wskazują stan odtwarzania, ale nie analizują sygnału audio. Efekt Acrylic zależy od systemowych efektów przezroczystości. Program wyświetla własne okno, nie integruje się z panelem widżetów Windows.
 
-Weryfikacja z **13 listopada 2026 r.** na Windows 11 x64 (kompilacja 26300):
+Więcej szczegółów: [pełna instrukcja](docs/INSTRUKCJA.md).
 
-- **8/8 testów automatycznych zakończonych powodzeniem**.
-- Potwierdzono odczyt utworów, okładek i stanu odtwarzania oraz obsługę play/pauza, zmiany utworów i przewijania.
-- Sprawdzono oba tryby widoku, zwijanie/rozwijanie, zapisywanie ustawień i przywracanie położenia okna.
-- Nie wszystkie warianty zostały przetestowane, m.in. Spotify Free, Spotify Connect, reklamy oraz różne konfiguracje wielu monitorów i DPI.
+## Testy
 
-Szczegóły: [Raport testów](docs/TESTY.md) · [Wyniki self-test](docs/self-test.txt).
+W dokumentacji dostarczonej z wersją **1.0.0**, zweryfikowanej **13 listopada 2026 r.** na Windows 11 x64 (build 26300), odnotowano **8/8 zaliczonych testów automatycznych** oraz pozytywne testy interfejsu i sterowania desktopową aplikacją Spotify. Nie wszystkie środowiska i warianty Spotify zostały przetestowane.
 
-## Technologia
+**Raport:** [TESTY.md](docs/TESTY.md) · **Wyniki testów jednostkowych:** [self-test.txt](docs/self-test.txt).
 
-- **C# / WPF / .NET 9**
-- Publikacja: **Windows x64**, samodzielna aplikacja z dołączonym środowiskiem .NET
-- Integracja multimedialna: [Windows GlobalSystemMediaTransportControls](https://learn.microsoft.com/en-us/uwp/api/windows.media.control.globalsystemmediatransportcontrolssessionmanager)
-- Efekt szkła: [DWM_SYSTEMBACKDROP_TYPE](https://learn.microsoft.com/en-us/windows/win32/api/dwmapi/ne-dwmapi-dwm_systembackdrop_type)
+## Kompilacja ze źródeł
 
-Dodatkowe informacje: [Instrukcja użytkowania](docs/INSTRUKCJA.md).
+Kod projektu znajduje się w katalogu [`source/`](source/).
 
-## Znaki towarowe
+**Wymagania deweloperskie:** Windows 11 x64, PowerShell i odpowiedni .NET SDK. Wersja 1.0.0 oryginalnie celuje w **.NET 9**.
 
-Nazwa Spotify, logo Spotify i pozostałe znaki towarowe należą do ich właścicieli. Projekt jest niezależny i nieoficjalny.
+```powershell
+# W katalogu głównym repozytorium
+.\source\Build.ps1
+```
+
+Skrypt publikuje samodzielną aplikację do `app\SpotifyGlassSidebar.exe`. Samodzielny test w zbudowanej aplikacji można uruchomić przez:
+
+```powershell
+.\app\SpotifyGlassSidebar.exe --self-test
+```
+
+Wynik zostanie zapisany do `app\test-results\self-test.txt`. Skrypt budowania i kod w tym repozytorium pochodzą z dostarczonej wersji 1.0.0; nie zostały tutaj ponownie skompilowane ani zweryfikowane na Windows.
+
+> **Uwaga dla deweloperów (listopad 2026):** wsparcie dla .NET 9 zakończyło się 10.11.2026. Przed publikacją nowej wersji zalecana jest migracja na **.NET 10 LTS** oraz ponowne testy aplikacji. Nie zmieniono docelowego frameworka w oryginalnym kodzie bez takiej weryfikacji. [Cykl wsparcia .NET](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core).
+
+## Technologie
+
+**C# · WPF · .NET 9 · Windows 11 x64**
+
+- Odczyt multimediów: [Windows GlobalSystemMediaTransportControls](https://learn.microsoft.com/en-us/uwp/api/windows.media.control.globalsystemmediatransportcontrolssessionmanager).
+- Systemowy efekt szkła: [DWM_SYSTEMBACKDROP_TYPE](https://learn.microsoft.com/en-us/windows/win32/api/dwmapi/ne-dwmapi-dwm_systembackdrop_type).
+- Dystrybucja: `win-x64`, self-contained, single-file.
+
+## Licencja i znaki towarowe
+
+Kod źródłowy projektu jest udostępniany na warunkach [licencji MIT](LICENSE). Licencja nie daje praw do nazw ani znaków towarowych Spotify. Projekt nie jest powiązany ze Spotify AB.
